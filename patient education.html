@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Patient Education</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+    <style>
+  body {
+      background-color: #f8f9fa;
+    }.heading{
+        background-color: #0d6e9e;
+    }
+
+    .section-title {
+      color: #0d6e9e;
+      margin-bottom: 1rem;
+    }
+
+    .emoji {
+      font-size: 1.5rem;
+    }
+
+    img {
+      border-radius: 10px;
+      height: auto;
+      max-height: 250px;
+      object-fit: cover;
+    }
+
+    .card {
+      border: none;
+      background-color: #ffffff;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+      margin-bottom: 2rem;
+    }
+
+    .card-body ul {
+      padding-left: 1.2rem;
+    }
+
+    footer {
+      background-color: #0d6e9e;
+      color: white;
+      text-align: center;
+      padding: 20px 0;
+      margin-top: 40px;
+    }
+    .navbar-nav .nav-link:hover,
+        .dropdown-menu .dropdown-item:hover {
+            background-color: #0d6e9e;
+            color: white !important;
+            /* Optional: makes text white for better contrast */
+            border-radius: 5px;
+            /* Optional: adds a smooth hover effect */
+            transition: background-color 0.3s ease;
+
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <nav class="navbar navbar-expand-lg sticky-top bg-white shadow">
+            <div class="container-fluid">
+                <a href="index.html" class="navbar-brand">
+                    <img src="images/img-2-removebg-preview (1).png" alt="LOGO" height="100" width="100"> 32 SMILE
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
+                    aria-controls="navbarCollapse" aria-expanded="false">
+                    <span class="navbar-toggler-icon"> </span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
+                    <div class="navbar-nav">
+                        <a href="index.html" class="nav-item nav-link"> Home</a>
+
+
+
+                        <div class="nav-item dropdown">
+                            <a href="product.html" class="nav-link dropdown-toggle" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                Products</a>
+                            <ul class="dropdown-menu">
+
+                                <li> <a href="product.html#ToothPaste" class="dropdown-item">ToothPaste </a></li>
+                                <li> <a href="product.html#ToothBrush" class="dropdown-item">ToothBrush</a></li>
+                                <li> <a href="product.html#Special Products For Kids" class="dropdown-item">Special Products For Kids</a></li>
+                                <li> <a href="product.html#Electrical Accessiores" class="dropdown-item">Electrical Accessiores</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="nav-item dropdown">
+                            <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                Information</a>
+                            <ul class="dropdown-menu">
+                                <li> <a href="professional education.html" class="dropdown-item">Profession Eduction</a>
+                                </li>
+                                <li> <a href="patient education.html" class="dropdown-item">Patient Eduction </a></li>
+                                <li> <a href="research.html" class="dropdown-item">Research</a></li>
+                            </ul>
+                        </div>
+                        <a href="contact us.html" class="nav-item nav-link"> Contact Us</a>
+                        <a href="about us.html" class="nav-item nav-link"> About US</a>
+                        <div class="nav-item dropdown">
+                            <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                Services</a>
+                            <ul class="dropdown-menu">
+                                <li> <a href="teeth cleaning.html" class="dropdown-item">Teeth cleaning</a>
+                                </li>
+                                <li> <a href="root canal.html" class="dropdown-item">Root Canal </a></li>
+                                <li> <a href="dental implant.html" class="dropdown-item">Dental Implant</a></li>
+                                <li> <a href="filling & repairs.html" class="dropdown-item">Fillings & Repairs</a></li>
+                                <li> <a href="padriatic dentistry.html" class="dropdown-item">Pediatric Dentistry</a>
+                                </li>
+                                <li> <a href="tooth extraction.html" class="dropdown-item">Tooth Extraction</a></li>
+                            </ul>
+                        </div>
+
+                    </div>
+                    <div class="d-flex align-items-center">
+                        <div class="d-flex">
+                            <a href="appoinment.html" class="btn btn-primary">Book Appointment</a>
+                            <button class="btn"> <a href="#"> <i class="fa-solid fa-magnifying-glass"></i></a></button>
+                        </div>
+                        <a href="product.html"><i class="fa-solid fa-cart-shopping"></i></a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+    
+
+    <!-- Main Container -->
+    <div class="heading text-white py-5 text-center p-5">
+        <div class="container">
+          <h1 class="fw-bold">Patient Education</h1>
+          <p class="lead">Empowering you to take charge of your dental health</p>
+        </div>
+    </div>
+    
+      <!-- Main Content -->
+      <main class="container my-5">
+    
+        <div class="mb-5 text-center">
+          <h2 class="emoji">🦷 Teeth Cleaning (Scaling & Polishing)</h2>
+          <p class="text-muted">Everything you need to know before your next cleaning visit</p>
+        </div>
+    
+        <!-- Education Sections -->
+        <div class="row">
+          <!-- Section 1 -->
+          <div class="col-md-6">
+            <div class="card">
+              <div class="card-body">
+                <h5 class="section-title">1. What is Teeth Cleaning?</h5>
+                <ul>
+                  <li>Removes <strong>plaque</strong> and <strong>tartar</strong>.</li>
+                  <li>Cleans around the <strong>gum line</strong> and <strong>between teeth</strong>.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+    
+          <!-- Section 2 -->
+          <div class="col-md-6">
+            <div class="card">
+              <div class="card-body">
+                <h5 class="section-title">2. Why is it Important?</h5>
+                <ul>
+                  <li>Prevents <strong>gum disease</strong>.</li>
+                  <li>Eliminates <strong>bad breath</strong>.</li>
+                  <li>Improves <strong>oral hygiene</strong>.</li>
+                  <li>Makes teeth <strong>brighter</strong>.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+    
+          <!-- Section 3 -->
+          <div class="col-md-6">
+            <div class="card">
+              <div class="card-body">
+                <h5 class="section-title">3. How is the Procedure Done?</h5>
+                <ul>
+                  <li><strong>Ultrasonic scaler</strong> removes deposits.</li>
+                  <li><strong>Manual tools</strong> clean deeper areas.</li>
+                  <li><strong>Polishing</strong> smooths the teeth surface.</li>
+                  <li><strong>Fluoride treatment</strong> for extra protection.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+    
+          <!-- Section 4 -->
+          <div class="col-md-6">
+            <div class="card">
+              <div class="card-body">
+                <h5 class="section-title">4. Is It Painful?</h5>
+                <ul>
+                  <li><strong>Generally not painful</strong>.</li>
+                  <li><strong>Mild discomfort</strong> if gums are sensitive.</li>
+                  <li><strong>Numbing gel</strong> can be used if needed.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+    
+          <!-- Section 5 -->
+          <div class="col-md-6">
+            <div class="card">
+              <div class="card-body">
+                <h5 class="section-title">5. Frequency</h5>
+                <ul>
+                  <li>Every <strong>6 months</strong>.</li>
+                  <li>Every <strong>3–4 months</strong> for smokers or gum disease.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+    
+          <!-- Section 6 -->
+          <div class="col-md-6">
+            <div class="card">
+              <div class="card-body">
+                <h5 class="section-title">6. Post-Cleaning Care</h5>
+                <ul>
+                  <li>Avoid <strong>hot/cold foods</strong> for a few hours.</li>
+                  <li><strong>Brush & floss daily</strong>.</li>
+                  <li>Attend <strong>regular checkups</strong>.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+    
+        <!-- Image Sections -->
+        <div class="row">
+          <div class="col-md-6 mb-4">
+            <h5 class="section-title">Oral Hygiene</h5>
+            <p>Brush twice daily and floss to keep your smile healthy.</p>
+            <img src="images/clean-teeth.webp" class="img-fluid w-100" alt="Oral Hygiene">
+          </div>
+    
+          <div class="col-md-6 mb-4">
+            <h5 class="section-title">Regular Check-ups</h5>
+            <p>Visit every six months for early detection and prevention.</p>
+            <img src="images/regular chkup.jpeg" class="img-fluid w-100" alt="Checkups">
+          </div>
+    
+          <div class="col-md-6 mb-4">
+            <h5 class="section-title">Diet and Dental Health</h5>
+            <p>Eat a balanced diet and avoid excessive sugar to maintain strong teeth.</p>
+            <img src="images/diet.webp" class="img-fluid w-100" alt="Healthy Diet">
+          </div>
+    
+          <div class="col-md-6 mb-4">
+            <h5 class="section-title">Common Dental Procedures</h5>
+            <p>Learn about fillings, whitening, and root canals. We're here to help.</p>
+            <img src="images/pic3.avif" class="img-fluid w-100" alt="Procedures">
+          </div>
+        </div>
+      </main>
+    <footer class="footer text-light pt-5">
+        <div class="container">
+            <div class="row text-center text-md-start align-items-start">
+
+                <!-- Logo -->
+                <div class="col-md-4 mb-4">
+                    <img src="images/img-2-removebg-preview (1).png" alt="32 smile Logo" class="mb-3" height="70"
+                        width="70">
+                    <p>We care for your smile with passion and precision. Trusted dental care for the whole family.</p>
+                </div>
+
+                <!-- Contact Info -->
+                <div class="col-md-4 mb-4">
+                    <h5 class="text-uppercase mb-3">Contact Us</h5>
+                    <p><i class="fas fa-phone-alt me-2"></i> (123) 456-7890</p>
+                    <p><i class="fas fa-envelope me-2"></i> 32 smile@yourdentalclinic.com</p>
+                    <p><i class="fas fa-map-marker-alt me-2"></i> 11, Sana Avenue, Aslam Market, Block D North Nazimabad
+                        Town, Karachi</p>
+                </div>
+
+                <!-- Social Links -->
+                <div class="col-md-2 mb-4">
+                    <h5 class="text-uppercase mb-3">Follow Us</h5>
+                    <a href="#" class="text-light me-3"><i class="fab fa-facebook fa-lg"></i></a>
+                    <a href="#" class="text-light me-3"><i class="fab fa-instagram fa-lg"></i></a>
+                    <a href="#" class="text-light me-3"><i class="fab fa-twitter fa-lg"></i></a>
+                    <a href="#" class="text-light"><i class="fab fa-linkedin fa-lg"></i></a>
+                </div>
+
+                <div class="col-md-2 mb-4">
+
+                    <a href="sitemap.html" class="text-light me-3"><i class="fa-solid fa-sitemap"> sitemap</i></a>
+                </div>
+            </div>
+
+            <!-- Divider -->
+            <hr class="border-light">
+
+            <!-- Copyright -->
+            <div class="text-center pb-3">
+                <p class="mb-0">&copy; 2025 <strong>32 smile</strong>. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

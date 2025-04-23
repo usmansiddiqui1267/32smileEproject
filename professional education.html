@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dr. Ali - Professional Education</title>
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+</head>
+<style>
+    * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:  sans-serif;
+}
+
+body {
+    background-color: #f5f5f5;
+    color: #333;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.heading {
+    background-color: #0d6e9e;
+    color: white;
+    padding: 30px 0;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+h1 {
+    font-size: 2.2rem;
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    font-size: 1.1rem;
+    opacity: 0.9;
+}
+
+.education-section {
+    background: white;
+    border-radius: 8px;
+    padding: 25px;
+    margin-bottom: 30px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+}
+
+h2 {
+    color: #0d6e9e;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #eee;
+}
+
+.education-item {
+    display: flex;
+    margin-bottom: 25px;
+    align-items: flex-start;
+}
+
+.education-icon {
+    width: 50px;
+    height: 50px;
+    background-color: #0d6e9e;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 20px;
+    color: white;
+    font-size: 1.3rem;
+    font-weight: bold;
+}
+
+.education-content {
+    flex: 1;
+}
+
+.education-title {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 5px;
+    color: #222;
+}
+
+.education-subtitle {
+    font-weight: 500;
+    color: #0d6e9e;
+    margin-bottom: 5px;
+}
+
+.education-date {
+    color: #666;
+    font-style: italic;
+    margin-bottom: 8px;
+}
+
+.education-description {
+    color: #555;
+    font-size: 0.95rem;
+}
+
+.timeline-heading {
+    margin: 25px 0 15px;
+    color: #0d6e9e;
+}
+
+.timeline {
+    margin-top: 20px;
+}
+
+.timeline-item {
+    position: relative;
+    padding-left: 45px;
+    margin-bottom: 25px;
+}
+
+.timeline-item:last-child {
+    margin-bottom: 0;
+}
+
+.timeline-item::before {
+    content: '';
+    position: absolute;
+    left: 16px;
+    top: 0;
+    height: 100%;
+    width: 2px;
+    background: #0d6e9e;
+}
+
+.timeline-dot {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: #0d6e9e;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: bold;
+}
+
+.timeline-content {
+    background: #f9f9f9;
+    padding: 15px;
+    border-radius: 6px;
+}
+
+.timeline-date {
+    font-weight: 600;
+    color: #0d6e9e;
+    margin-bottom: 5px;
+}
+
+.image-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.gallery-item {
+    width: calc(33.333% - 10px);
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    transition: transform 0.3s;
+}
+
+.gallery-item img:hover {
+    transform: scale(1.03);
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #0d6e9e;
+    color: white;
+    margin-top: 40px;
+}
+
+@media (max-width: 768px) {
+    .education-item {
+        flex-direction: column;
+    }
+    
+    .education-icon {
+        margin-bottom: 15px;
+        margin-right: 0;
+    }
+    
+    .gallery-item {
+        width: calc(50% - 10px);
+    }
+}
+
+@media (max-width: 480px) {
+    .gallery-item {
+        width: 100%;
+    }
+    
+    h1 {
+        font-size: 1.8rem;
+    }
+} .navbar-nav .nav-link:hover,
+        .dropdown-menu .dropdown-item:hover {
+            background-color: #0d6e9e;
+            color: white !important;
+            /* Optional: makes text white for better contrast */
+            border-radius: 5px;
+            /* Optional: adds a smooth hover effect */
+            transition: background-color 0.3s ease;
+
+        }
+</style>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg sticky-top bg-white shadow">
+            <div class="container-fluid">
+                <a href="index.html" class="navbar-brand">
+                    <img src="images/img-2-removebg-preview (1).png" alt="LOGO" height="100" width="100"> 32 SMILE
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
+                    aria-controls="navbarCollapse" aria-expanded="false">
+                    <span class="navbar-toggler-icon"> </span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
+                    <div class="navbar-nav">
+                        <a href="index.html" class="nav-item nav-link"> Home</a>
+
+
+
+                        <div class="nav-item dropdown">
+                            <a href="product.html" class="nav-link dropdown-toggle" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                Products</a>
+                            <ul class="dropdown-menu">
+
+                                <li> <a href="product.html#ToothPaste" class="dropdown-item">ToothPaste </a></li>
+                                <li> <a href="product.html#ToothBrush" class="dropdown-item">ToothBrush</a></li>
+                                <li> <a href="product.html#Special Products For Kids" class="dropdown-item">Special Products For Kids</a></li>
+                                <li> <a href="product.html#Electrical Accessiores" class="dropdown-item">Electrical Accessiores</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="nav-item dropdown">
+                            <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                Information</a>
+                            <ul class="dropdown-menu">
+                                <li> <a href="professional education.html" class="dropdown-item">Profession Eduction</a>
+                                </li>
+                                <li> <a href="patient education.html" class="dropdown-item">Patient Eduction </a></li>
+                                <li> <a href="research.html" class="dropdown-item">Research</a></li>
+                            </ul>
+                        </div>
+                        <a href="contact us.html" class="nav-item nav-link"> Contact Us</a>
+                        <a href="about us.html" class="nav-item nav-link"> About US</a>
+                        <div class="nav-item dropdown">
+                            <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                Services</a>
+                            <ul class="dropdown-menu">
+                                <li> <a href="teeth cleaning.html" class="dropdown-item">Teeth cleaning</a>
+                                </li>
+                                <li> <a href="root canal.html" class="dropdown-item">Root Canal </a></li>
+                                <li> <a href="dental implant.html" class="dropdown-item">Dental Implant</a></li>
+                                <li> <a href="filling & repairs.html" class="dropdown-item">Fillings & Repairs</a></li>
+                                <li> <a href="padriatic dentistry.html" class="dropdown-item">Pediatric Dentistry</a>
+                                </li>
+                                <li> <a href="tooth extraction.html" class="dropdown-item">Tooth Extraction</a></li>
+                            </ul>
+                        </div>
+
+                    </div>
+                    <div class="d-flex align-items-center">
+                        <div class="d-flex">
+                            <a href="appoinment.html" class="btn btn-primary">Book Appointment</a>
+                            <button class="btn"> <a href="#"> <i class="fa-solid fa-magnifying-glass"></i></a></button>
+                        </div>
+                        <a href="product.html"><i class="fa-solid fa-cart-shopping"></i></a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div class="heading">
+        <div class="container">
+            <h1>Professional Education</h1>
+            <p class="subtitle">Dr. Ali Khan - BDS, MDS (Dow University of Health Sciences)</p>
+        </div>
+    </div>
+    
+    <div class="container">
+        <section class="education-section">
+            <h2>Academic Qualifications</h2>
+            
+            <div class="education-item">
+                <div class="education-icon">M</div>
+                <div class="education-content">
+                    <h3 class="education-title">Master of Dental Surgery (MDS)</h3>
+                    <p class="education-subtitle">Dow University of Health Sciences, Karachi</p>
+                    <p class="education-date">2018 - 2021</p>
+                    <p class="education-description">
+                        Specialized in Orthodontics and Dentofacial Orthopedics. Completed thesis on "Advanced Orthodontic Treatment Modalities".
+                    </p>
+                </div>
+            </div>
+            
+            <div class="education-item">
+                <div class="education-icon">B</div>
+                <div class="education-content">
+                    <h3 class="education-title">Bachelor of Dental Surgery (BDS)</h3>
+                    <p class="education-subtitle">Dow Dental College, DUHS</p>
+                    <p class="education-date">2012 - 2017</p>
+                    <p class="education-description">
+                        5 years of professional dental education including 1 year internship at Civil Hospital Karachi.
+                    </p>
+                </div>
+            </div>
+            
+            <h3 class="timeline-heading">Dental Education Timeline</h3>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-dot">1</div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">2012 - 2017 (5 Years)</div>
+                        <p>Bachelor of Dental Surgery (BDS) program</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-dot">2</div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">2017 - 2018 (1 Year)</div>
+                        <p>House Job/Internship training</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-dot">3</div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">2018 - 2021 (3 Years)</div>
+                        <p>Master of Dental Surgery (MDS) specialization</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section class="education-section">
+            <h2>Specialized Training</h2>
+            
+            <div class="education-item">
+                <div class="education-icon">C</div>
+                <div class="education-content">
+                    <h3 class="education-title">Dental Implant Certification</h3>
+                    <p class="education-subtitle">International Implant Foundation</p>
+                    <p class="education-date">2022</p>
+                    <p class="education-description">
+                        Advanced training in dental implant placement and restoration techniques.
+                    </p>
+                </div>
+            </div>
+            
+            <div class="education-item">
+                <div class="education-icon">C</div>
+                <div class="education-content">
+                    <h3 class="education-title">Laser Dentistry</h3>
+                    <p class="education-subtitle">World Clinical Laser Institute</p>
+                    <p class="education-date">2020</p>
+                    <p class="education-description">
+                        Training in use of dental lasers for various procedures.
+                    </p>
+                </div>
+            </div>
+        </section>
+        
+        <section class="education-section">
+            <h2>Gallery</h2>
+            <div class="image-gallery">
+                <div class="gallery-item">
+                    <img src="images/pic1.jpeg" alt="Dental School">
+                </div>
+                <div class="gallery-item">
+                    <img src="images/pic2.avif" alt="Graduation">
+                </div>
+                <div class="gallery-item">
+                    <img src="images/pic3.avif" alt="Conference">
+                </div>
+            </div>
+        </section>
+    </div>
+    
+    >  > <footer class="footer text-light pt-5">
+        <div class="container">
+            <div class="row text-center text-md-start align-items-start">
+
+                <!-- Logo -->
+                <div class="col-md-4 mb-4">
+                    <img src="images/img-2-removebg-preview (1).png" alt="32 smile Logo" class="mb-3" height="70"
+                        width="70">
+                    <p>We care for your smile with passion and precision. Trusted dental care for the whole family.</p>
+                </div>
+
+                <!-- Contact Info -->
+                <div class="col-md-4 mb-4">
+                    <h5 class="text-uppercase mb-3">Contact Us</h5>
+                    <p><i class="fas fa-phone-alt me-2"></i> (123) 456-7890</p>
+                    <p><i class="fas fa-envelope me-2"></i> 32 smile@yourdentalclinic.com</p>
+                    <p><i class="fas fa-map-marker-alt me-2"></i> 11, Sana Avenue, Aslam Market, Block D North Nazimabad
+                        Town, Karachi</p>
+                </div>
+
+                <!-- Social Links -->
+                <div class="col-md-2 mb-4">
+                    <h5 class="text-uppercase mb-3">Follow Us</h5>
+                    <a href="#" class="text-light me-3"><i class="fab fa-facebook fa-lg"></i></a>
+                    <a href="#" class="text-light me-3"><i class="fab fa-instagram fa-lg"></i></a>
+                    <a href="#" class="text-light me-3"><i class="fab fa-twitter fa-lg"></i></a>
+                    <a href="#" class="text-light"><i class="fab fa-linkedin fa-lg"></i></a>
+                </div>
+
+                <div class="col-md-2 mb-4">
+
+                    <a href="sitemap.html" class="text-light me-3"><i class="fa-solid fa-sitemap"> sitemap</i></a>
+                </div>
+            </div>
+
+            <!-- Divider -->
+            <hr class="border-light">
+
+            <!-- Copyright -->
+            <div class="text-center pb-3">
+                <p class="mb-0">&copy; 2025 <strong>32 smile</strong>. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

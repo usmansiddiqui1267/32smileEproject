@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-Project</title>
+
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+    <!-- aos library  -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+
+    <style>
+        .slider {
+            padding: 2rem;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        .slider h2 {
+            margin-bottom: 1rem;
+            font-size: 2rem;
+        }
+
+        .slider-container {
+            display: flex;
+            overflow-x: auto;
+            gap: 1rem;
+            scroll-snap-type: x mandatory;
+            padding-bottom: 1rem;
+        }
+
+        .card {
+            margin-top: 20px;
+            margin-left: 40px;
+            display: flex;
+            flex: 0 0 auto;
+            scroll-snap-align: start;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 1rem;
+            text-align: center;
+            justify-content: center;
+            min-width: 200px;
+            max-width: 220px;
+            transition: transform 0.3s;
+        }
+
+        .card:hover {
+            transform: scale(1.05);
+        }
+
+        .card img {
+            width: 100%;
+            border-radius: 10px;
+        }
+
+        .card h3 {
+            margin: 0.5rem 0 0.2rem;
+            font-size: 1.1rem;
+        }
+
+        .card p {
+            color: #888;
+            font-size: 1rem;
+        }
+
+        .services-section {
+            /* max-width: 1200px; */
+            margin: auto;
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        .services-section h2 {
+            font-size: 2.8rem;
+            color: #005fa3;
+            margin-bottom: 50px;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+
+        .service-card {
+            background: white;
+            padding: 30px 20px;
+            border-radius: 10px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s ease;
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .service-icon {
+            font-size: 40px;
+            color: #00bcd4;
+            margin-bottom: 15px;
+        }
+
+        .service-title {
+            font-size: 1.4rem;
+            font-weight: bold;
+            margin-bottom: 10px;
+            color: #004a7c;
+        }
+
+        .service-desc {
+            font-size: 1rem;
+            color: #555;
+        }
+
+        @media (max-width: 600px) {
+            .services-section h2 {
+                font-size: 2rem;
+            }
+        }
+
+        .contact-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 40px;
+            justify-content: space-between;
+        }
+
+        .contact-info {
+            flex: 1;
+            min-width: 280px;
+        }
+
+        .contact-info h3 {
+            margin-bottom: 20px;
+            color: #004a7c;
+        }
+
+        .info-item {
+            margin-bottom: 15px;
+            font-size: 1.1rem;
+            color: #333;
+        }
+
+        .info-item span {
+            font-weight: bold;
+            display: inline-block;
+            width: 100px;
+            color: #007acc;
+        }
+
+        .map {
+            flex: 1;
+            min-width: 300px;
+            height: 300px;
+        }
+
+        .map iframe {
+            width: 100%;
+            height: 100%;
+            border: 0;
+            border-radius: 10px;
+        }
+
+        @media (max-width: 768px) {
+            .contact-container {
+                flex-direction: column;
+            }
+        }
+
+        .navbar-nav .nav-link:hover,
+        .dropdown-menu .dropdown-item:hover {
+            background-color: #0d6e9e;
+            color: white !important;
+            /* Optional: makes text white for better contrast */
+            border-radius: 5px;
+            /* Optional: adds a smooth hover effect */
+            transition: background-color 0.3s ease;
+
+        }.footer{
+            background-color: #0d6e9e;
+        }
+    </style>
+
+
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg sticky-top bg-white shadow">
+            <div class="container-fluid">
+                <a href="index.html" class="navbar-brand">
+                    <img src="images/img-2-removebg-preview (1).png" alt="LOGO" height="100" width="100"> 32 SMILE
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
+                    aria-controls="navbarCollapse" aria-expanded="false">
+                    <span class="navbar-toggler-icon"> </span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
+                    <div class="navbar-nav">
+                        <a href="index.html" class="nav-item nav-link"> Home</a>
+
+
+
+                        <div class="nav-item dropdown">
+                            <a href="product.html" class="nav-link dropdown-toggle" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                Products</a>
+                            <ul class="dropdown-menu">
+
+                                <li> <a href="product.html#ToothPaste" class="dropdown-item">ToothPaste </a></li>
+                                <li> <a href="product.html#ToothBrush" class="dropdown-item">ToothBrush</a></li>
+                                <li> <a href="product.html#Special Products For Kids" class="dropdown-item">Special Products For Kids</a></li>
+                                <li> <a href="product.html#Electrical Accessiores" class="dropdown-item">Electrical Accessiores</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="nav-item dropdown">
+                            <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                Information</a>
+                            <ul class="dropdown-menu">
+                                <li> <a href="professional education.html" class="dropdown-item">Profession Eduction</a>
+                                </li>
+                                <li> <a href="patient education.html" class="dropdown-item">Patient Eduction </a></li>
+                                <li> <a href="research.html" class="dropdown-item">Research</a></li>
+                            </ul>
+                        </div>
+                        <a href="contact us.html" class="nav-item nav-link"> Contact Us</a>
+                        <a href="about us.html" class="nav-item nav-link"> About US</a>
+                        <div class="nav-item dropdown">
+                            <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                Services</a>
+                            <ul class="dropdown-menu">
+                                <li> <a href="teeth cleaning.html" class="dropdown-item">Teeth cleaning</a>
+                                </li>
+                                <li> <a href="root canal.html" class="dropdown-item">Root Canal </a></li>
+                                <li> <a href="dental implant.html" class="dropdown-item">Dental Implant</a></li>
+                                <li> <a href="filling & repairs.html" class="dropdown-item">Fillings & Repairs</a></li>
+                                <li> <a href="padriatic dentistry.html" class="dropdown-item">Pediatric Dentistry</a>
+                                </li>
+                                <li> <a href="tooth extraction.html" class="dropdown-item">Tooth Extraction</a></li>
+                            </ul>
+                        </div>
+
+                    </div>
+                    <div class="d-flex align-items-center">
+                        <div class="d-flex">
+                            <a href="appoinment.html" class="btn btn-primary">Book Appointment</a>
+                            <button class="btn"> <a href="#"> <i class="fa-solid fa-magnifying-glass"></i></a></button>
+                        </div>
+                        <a href="product.html"><i class="fa-solid fa-cart-shopping"></i></a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <!-- Carousel -->
+    <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0"
+                class="active"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"></button>
+        </div>
+
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="background images/background-image.jpg" class="d-block w-100" alt="Nature">
+                <div class="carousel-caption d-none d-md-block">
+                    <h2 class="text-dark justify-content-center align-items-center">let us Brighten your smile</h2>
+                    <p class="text-dark justify-content-center">"Your Smile, Our Mission."</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="background images/background-image 2 .jpg" alt="Technology" class="d-block w-100">
+                <div class="carousel-caption d-none d-md-block">
+                    <h2 class="text-dark justify-content-center">"Healthy Teeth. Happy Life."</h2>
+                    <p class="text-dark justify-content-center">Healthy Smiles Start Here.</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="background images/background-image 1 .jpg" class="d-block w-100" alt="City">
+                <div class="carousel-caption d-none d-md-block">
+                    <h2 class="text-dark">"Caring for Your Smile with Precision."</h2>
+                    <p class="text-dark">Compassionate Dentistry You Can Trust.</p>
+                </div>
+            </div>
+        </div>
+
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+            data-bs-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+            data-bs-slide="next">
+            <span class="carousel-control-next-icon"></span>
+        </button>
+    </div>
+    <center>
+        <h2 class="mt-5">Featured Product</h2>
+    </center>
+    <section class="slider">
+        <div class="slider-container">
+            <div class="card">
+                <a href="product.html#ToothPaste"><img src="toothpaste/paste img 2.jpeg" alt="Product 1"></a>
+                <h3>Product 1</h3>
+            </div>
+            <div class="card">
+                <a href="product.html#ToothBrush"><img src="brush/brush img 1.jpeg" alt="Product 2"></a>
+                <h3>Product 2</h3>
+            </div>
+            <div class="card">
+                <a href="product.html#Special Products For Kids"> <img src="kids product/kids pro img 1.jpg" alt="Product 3"></a>
+                <h3>Product 3</h3>
+
+            </div>
+            <div class="card">
+                <a href="product.html#Electrical Accessiores"> <img src="electrical accessiores/electrical img 1.avif" alt="Product 4"></a>
+                <h3>Product 4</h3>
+            </div>
+        </div>
+
+
+        <center>
+            <h2 class="mt-5">OUR SERVICES</h2>
+        </center>
+
+        <div class="services-grid">
+            <a href="teeth cleaning.html" class="service-card">
+                <div class="service-icon">🦷</div>
+                <div class="service-title">Teeth Cleaning</div>
+                <div class="service-desc">Professional cleaning to keep your teeth healthy and plaque-free.</div>
+            </a>
+
+            <a href="root canal.html" class="service-card">
+                <div class="service-icon">🦷</div>
+                <div class="service-title">Root Canal</div>
+                <div class="service-desc">Brighten your smile with our safe and effective whitening treatments.</div>
+            </a>
+
+            <a href="dental implant.html" class="service-card">
+                <div class="service-icon">🪥</div>
+                <div class="service-title">Dental Checkup</div>
+                <div class="service-desc">Regular exams to ensure your oral health is always at its best.</div>
+            </a>
+
+            <a href="filling & repairs.html" class="service-card">
+                <div class="service-icon">🛠️</div>
+                <div class="service-title">Fillings & Repairs</div>
+                <div class="service-desc">Fix cavities and damaged teeth with durable, natural-looking fillings.</div>
+            </a>
+        </div>
+        <div class="services-grid center mt-5">
+            <a href="padriatic dentistry.html" class="service-card">
+                <div class="service-icon">👶</div>
+                <div class="service-title">Pediatric Dentistry</div>
+                <div class="service-desc">Gentle care for little smiles — our kid-friendly services are top-notch.</div>
+            </a>
+
+            <a href="tooth extraction.html" class="service-card">
+                <div class="service-icon">🦷</div>
+                <div class="service-title">Tooth Extraction</div>
+                <div class="service-desc">Safe and painless extractions for severely damaged or impacted teeth.</div>
+            </a>
+        </div>
+
+       
+
+        <center>
+            <h2 class="mt-5 mb-5">CONTACT US</h2>
+        </center>
+
+        <div class="contact-container ">
+
+            <div class="contact-info">
+                <h3>Get in Touch</h3>
+                <div class="info-item"><span>Phone:</span> (123) 456-7890</div>
+                <div class="info-item"><span>Email:</span> 32 smile@dentalclinic.com</div>
+                <div class="info-item"><span>Address:</span> 11, Sana Avenue, Aslam Market, Block D North Nazimabad
+                    Town, Karachi</div>
+                <div class="info-item"><span>Hours:</span> Mon - Fri, 9am - 5pm</div>
+            </div>
+
+            <div class="map">
+                <!-- Replace the src below with your actual location embed -->
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d57896.809680414925!2d67.01606625987928!3d24.913306136950048!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1sdental%20clinic!5e0!3m2!1sen!2s!4v1744732038322!5m2!1sen!2s"
+                    allowfullscreen="" loading="lazy"></iframe>
+            </div>
+
+        </div>
+    </section>
+
+
+    > <footer class="footer text-light pt-5">
+        <div class="container">
+            <div class="row text-center text-md-start align-items-start">
+
+                <!-- Logo -->
+                <div class="col-md-4 mb-4">
+                    <img src="images/img-2-removebg-preview (1).png" alt="32 smile Logo" class="mb-3" height="70"
+                        width="70">
+                    <p>We care for your smile with passion and precision. Trusted dental care for the whole family.</p>
+                </div>
+
+                <!-- Contact Info -->
+                <div class="col-md-4 mb-4">
+                    <h5 class="text-uppercase mb-3">Contact Us</h5>
+                    <p><i class="fas fa-phone-alt me-2"></i> (123) 456-7890</p>
+                    <p><i class="fas fa-envelope me-2"></i> 32 smile@yourdentalclinic.com</p>
+                    <p><i class="fas fa-map-marker-alt me-2"></i> 11, Sana Avenue, Aslam Market, Block D North Nazimabad
+                        Town, Karachi</p>
+                </div>
+
+                <!-- Social Links -->
+                <div class="col-md-2 mb-4">
+                    <h5 class="text-uppercase mb-3">Follow Us</h5>
+                    <a href="#" class="text-light me-3"><i class="fab fa-facebook fa-lg"></i></a>
+                    <a href="#" class="text-light me-3"><i class="fab fa-instagram fa-lg"></i></a>
+                    <a href="#" class="text-light me-3"><i class="fab fa-twitter fa-lg"></i></a>
+                    <a href="#" class="text-light"><i class="fab fa-linkedin fa-lg"></i></a>
+                </div>
+
+                <div class="col-md-2 mb-4">
+
+                    <a href="sitemap.html" class="text-light me-3"><i class="fa-solid fa-sitemap"> sitemap</i></a>
+                </div>
+            </div>
+
+            <!-- Divider -->
+            <hr class="border-light">
+
+            <!-- Copyright -->
+            <div class="text-center pb-3">
+                <p class="mb-0">&copy; 2025 <strong>32 smile</strong>. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+
+</body>
+
+</html>

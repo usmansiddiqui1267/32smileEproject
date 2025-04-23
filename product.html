@@ -1,0 +1,1013 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: sans-serif;
+    }
+    .container-1{
+        background-color: steelblue;
+        height: 150px;
+        width: 100%;
+        padding-top: 20px;
+        margin-bottom: 40px;
+
+    } 
+    .text{
+        color: #fff;
+        padding: 10px;
+        
+
+    }
+
+
+    h2{
+        margin-top: 70px;
+    }
+    
+    
+    
+    .cardprod {
+            background-size: cover;
+            background-repeat: no-repeat;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            border-radius: 2px;
+            transition: 0.8s;
+            cursor: pointer;
+            box-shadow: 0 14px 28px rgba(0,0,0,0.25),
+            0 10px 10px rgba(0,0,0,0.22);
+            transition: .4s;
+            background: #f2f2f2;
+        }
+
+        
+        
+        .new {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            background-color: black;
+            color: #fff;
+            text-transform: uppercase;
+            padding: 2px 10px;
+            border-radius: 20px;
+        }
+
+        .overlay {
+            position: absolute;
+            padding: 5px;
+            background-color: black;
+            width: 100%;
+            height: 100%;
+            opacity: 0.8;
+            transition: 0.8s;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            top: 100%;
+            color: #fff;
+        }
+
+        .cardprod:hover .overlay {
+            top: 0%;
+        }
+
+        .card-body {
+            background-color: #fff;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            /* height: 200px; */
+        }
+
+        .card-img {
+            height: 100%;
+        }
+
+        .b-img {
+            height: 300px;
+        }
+
+
+        a {
+            text-decoration: none !important;
+        }
+        
+        @keyframes appear{
+            from {
+                opacity: 0;
+                scale: 0;
+
+            }
+            to{
+                opacity: 1;
+                scale: 1;
+            }
+        }
+
+        .container{
+           
+            animation: appear  linear;
+            animation-timeline: view();
+            animation-range: entry 0% cover 20%;
+
+        }.center{
+            animation: appear  linear;
+            animation-timeline: view();
+            animation-range: entry 0% cover 20%;
+        } .navbar-nav .nav-link:hover,
+        .dropdown-menu .dropdown-item:hover {
+            background-color: #0d6e9e;
+            color: white !important;
+            /* Optional: makes text white for better contrast */
+            border-radius: 5px;
+            /* Optional: adds a smooth hover effect */
+            transition: background-color 0.3s ease;
+
+        }
+  .footer{
+    background-color: #0d6e9e;
+  }
+
+</style>
+<body>
+    
+    <header>
+        <nav class="navbar navbar-expand-lg sticky-top bg-white shadow">
+            <div class="container-fluid">
+                <a href="index.html" class="navbar-brand">
+                    <img src="images/img-2-removebg-preview (1).png" alt="LOGO" height="100" width="100"> 32 SMILE
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
+                    aria-controls="navbarCollapse" aria-expanded="false">
+                    <span class="navbar-toggler-icon"> </span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
+                    <div class="navbar-nav">
+                        <a href="index.html" class="nav-item nav-link"> Home</a>
+
+
+
+                        <div class="nav-item dropdown">
+                            <a href="product.html" class="nav-link dropdown-toggle" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                Products</a>
+                            <ul class="dropdown-menu">
+
+                                <li> <a href="product.html#ToothPaste" class="dropdown-item">ToothPaste </a></li>
+                                <li> <a href="product.html#ToothBrush" class="dropdown-item">ToothBrush</a></li>
+                                <li> <a href="product.html#Special Products For Kids" class="dropdown-item">Special Products For Kids</a></li>
+                                <li> <a href="product.html#Electrical Accessiores" class="dropdown-item">Electrical Accessiores</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="nav-item dropdown">
+                            <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                Information</a>
+                            <ul class="dropdown-menu">
+                                <li> <a href="professional education.html" class="dropdown-item">Profession Eduction</a>
+                                </li>
+                                <li> <a href="patient education.html" class="dropdown-item">Patient Eduction </a></li>
+                                <li> <a href="research.html" class="dropdown-item">Research</a></li>
+                            </ul>
+                        </div>
+                        <a href="contact us.html" class="nav-item nav-link"> Contact Us</a>
+                        <a href="about us.html" class="nav-item nav-link"> About US</a>
+                        <div class="nav-item dropdown">
+                            <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                Services</a>
+                            <ul class="dropdown-menu">
+                                <li> <a href="teeth cleaning.html" class="dropdown-item">Teeth cleaning</a>
+                                </li>
+                                <li> <a href="root canal.html" class="dropdown-item">Root Canal </a></li>
+                                <li> <a href="dental implant.html" class="dropdown-item">Dental Implant</a></li>
+                                <li> <a href="filling & repairs.html" class="dropdown-item">Fillings & Repairs</a></li>
+                                <li> <a href="padriatic dentistry.html" class="dropdown-item">Pediatric Dentistry</a>
+                                </li>
+                                <li> <a href="tooth extraction.html" class="dropdown-item">Tooth Extraction</a></li>
+                            </ul>
+                        </div>
+
+                    </div>
+                    <div class="d-flex align-items-center">
+                        <div class="d-flex">
+                            <a href="appoinment.html" class="btn btn-primary">Book Appointment</a>
+                            <button class="btn"> <a href="#"> <i class="fa-solid fa-magnifying-glass"></i></a></button>
+                        </div>
+                        <a href="product.html"><i class="fa-solid fa-cart-shopping"></i></a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+    
+     
+   
+
+
+
+
+
+           <!-- MODAL -->
+
+    <div class="modal" id="TYS" tabindex="-1" aria-labelledby="modalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <h3 id="modalLabel"> Thank YOu !! </h3>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-outline-danger" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+        
+
+    <h2 class="mb-5" id="ToothPaste"><u><center>ToothPaste</center></u></h2>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 ">
+                    <div class="card ">
+                        <div class="card-body b-img">
+                            <div class="cardprod">
+                                <div class="fs-5 new"> new </div>
+                                <div class="overlay">
+                                    <h5 class="cardcontent">Recommended by leading Dentist</h5>
+                                    <p class="cardcontent"> Medicam toothpaste is a dental care product that focuses on promoting oral health. It is often designed for sensitive teeth, helping to relieve discomfort caused by tooth sensitivity. </p>
+                                    <a href="Alternating Filigree Statement Amber Bracelet.docx"
+                                        download="Alternating Filigree Statement Amber Bracelet.docx">
+                                        <button class="btn btn-light"> Download Full Details <i
+                                                class="fa-solid fa-download"></i></button>
+                                    </a>
+                                </div>
+                                <img src="toothpaste/paste img 2.jpeg" class="card-img" alt="">
+                            </div>
+                        </div>
+                        <div class="card-body bg-light text-center">
+                            <div class="mb-2">
+                                <h6 class="mb-3">Medicam ToothPste</h6>
+                                <a href="" class="text-muted">Recommended by leading Dentist</a>
+                            </div>
+                            <h4> 200 RS</h4>
+                            <button type="button" class="btn btn-outline-dark" data-bs-toggle="modal" data-bs-target="#TYS">
+                                <i class="fa-solid fa-cart-shopping"></i> Add to cart
+                            </button>
+                        </div>
+                    </div>
+                    <div class="modal" id="card1" tabindex="-1" aria-labelledby="modalLabel" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <h3 id="modalLabel"> Thank YOu !! </h3>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-outline-danger"
+                                        data-bs-dismiss="modal">Close</button>
+                                </div>
+                            </div>
+                        </div>
+    
+                    </div>
+                </div>
+    
+                <div class="col-md-4">
+                    <div class="card">
+                        <div class="card-body b-img">
+                            <div class="cardprod">
+                                <div class="fs-5 new"> new </div>
+                                <div class="overlay">
+                                    <h5 class="cardcontent">Recommended by leading Dentist</h5>
+                                    <p class="cardcontent">  Medicam toothpaste is a dental care product that focuses on promoting oral health. It is often designed for sensitive teeth, helping to relieve discomfort caused by tooth sensitivity.</p>
+                                    <a href="Alternating Filigree Statement Amber Bracelet.docx"
+                                        download="Alternating Filigree Statement Amber Bracelet.docx">
+                                        <button class="btn btn-light"> Download Full Details <i
+                                                class="fa-solid fa-download"></i></button>
+                                    </a>
+                                </div>
+                                <img src="toothpaste/paste img 3.jpg" class="card-img" alt="">
+                            </div>
+                        </div>
+                        <div class="card-body bg-light text-center">
+                            <div class="mb-2">
+                                <h6 class="mb-3"> Medicam Gel</h6>
+                                <a href="" class="text-muted"> Ultra Fresh</a>
+                            </div>
+                            <h4> 250 RS</h4>
+                            <button type="button" class="btn btn-outline-dark" data-bs-toggle="modal" data-bs-target="#TYS">
+                                <i class="fa-solid fa-cart-shopping"></i> Add to cart</button>
+                        </div>
+                    </div>
+    
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <div class="card-body b-img">
+                            <div class="cardprod">
+                                <div class="fs-5 new"> new </div>
+                                <div class="overlay">
+                                    <h5 class="cardcontent"> Recommended by leading Dentist</h5>
+                                    <p class="cardcontent"> Medicam toothpaste is a dental care product that focuses on promoting oral health. It is often designed for sensitive teeth, helping to relieve discomfort caused by tooth sensitivity.</p>
+                                    <a href="Alternating Filigree Statement Amber Bracelet.docx"
+                                        download="Alternating Filigree Statement Amber Bracelet.docx">
+                                        <button class="btn btn-light"> Download Full Details <i
+                                                class="fa-solid fa-download"></i></button>
+                                    </a>
+                                </div>
+                                <img src="toothpaste/paste img 4.jpg" class="card-img" alt="">
+                            </div>
+                        </div>
+                        <div class="card-body bg-light text-center">
+                            <div class="mb-2">
+                                <h6 class="mb-3"> Medicam Gel</h6>
+                                <a href="" class="text-muted"> Ultra Fresh</a>
+                            </div>
+                            <h4> 250 RS</h4>
+                            <button type="button" class="btn btn-outline-dark" data-bs-toggle="modal" data-bs-target="#TYS">
+                                <i class="fa-solid fa-cart-shopping"></i> Add to cart</button>
+                        </div>
+                    </div>
+                  
+                </div>
+                <div class="col-md-4 mt-5">
+                    <div class="card">
+                        <div class="card-body b-img">
+                            <div class="cardprod">
+                                <div class="fs-5 new"> new </div>
+                                <div class="overlay">
+                                    <h4 class="cardcontent"> Recommended by leading Dentist</h4>
+                                    <p class="cardcontent"> Medicam toothpaste is a dental care product that focuses on promoting oral health. It is often designed for sensitive teeth, helping to relieve discomfort caused by tooth sensitivity.</p>
+                                    <a href="Alternating Filigree Statement Amber Bracelet.docx"
+                                        download="Alternating Filigree Statement Amber Bracelet.docx">
+                                        <button class="btn btn-light"> Download Full Details <i
+                                                class="fa-solid fa-download"></i></button>
+                                    </a>
+                                </div>
+                                <img src="toothpaste/paste img 5.webp" class="card-img"
+                                    alt="">
+                            </div>
+                        </div>
+                        <div class="card-body bg-light text-center">
+                            <div class="mb-2">
+                                <h6 class="mb-3"> Medicam Gel</h6>
+                                <a href="" class="text-muted"> Ultra Fresh</a>
+                            </div>
+                            <h4> 250 RS</h4>
+                            <button type="button" class="btn btn-outline-dark" data-bs-toggle="modal" data-bs-target="#TYS">
+                                <i class="fa-solid fa-cart-shopping"></i> Add to cart</button>
+                        </div>
+                    </div>
+    
+                </div>
+                <div class="col-md-4 mt-5">
+                    <div class="card">
+                        <div class="card-body b-img">
+                            <div class="cardprod">
+                                <div class="fs-5 new"> new </div>
+                                <div class="overlay">
+                                    <h5 class="cardcontent"> Recommended by leading Dentist</h5>
+                                    <p class="cardcontent"> Medicam toothpaste is a dental care product that focuses on promoting oral health. It is often designed for sensitive teeth, helping to relieve discomfort caused by tooth sensitivity. </p>
+                                    <a href="Alternating Filigree Statement Amber Bracelet.docx"
+                                        download="Alternating Filigree Statement Amber Bracelet.docx">
+                                        <button class="btn btn-light"> Download Full Details <i
+                                                class="fa-solid fa-download"></i></button>
+                                    </a>
+                                </div>
+                                <img src="toothpaste/paste img 6.webp" class="card-img"
+                                    alt="">
+                            </div>
+                        </div>
+                        <div class="card-body bg-light text-center">
+                            <div class="mb-2">
+                                <h6 class="mb-3"> Medicam Gum</h6>
+                                <a href="" class="text-muted"> Extra Fresh</a>
+                            </div>
+                            <h4>300 RS</h4>
+                            <button type="button" class="btn btn-outline-dark" data-bs-toggle="modal" data-bs-target="#TYS">
+                                <i class="fa-solid fa-cart-shopping"></i> Add to cart</button>
+                        </div>
+                    </div>
+    
+                    
+    
+                </div>
+            </div>
+    
+    
+        </div>
+    <center>
+        <h2 class="mt-5 mb-5" id="ToothBrush"><u>ToothBrush</u></h2>
+    </center>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 ">
+                    <div class="card">
+                        <div class="card-body b-img">
+                            <div class="cardprod">
+                                <div class="fs-5 new"> new </div>
+                                <div class="overlay">
+                                    <h5 class="cardcontent"> Recommended by leading Dentist</h5>
+                                    <p class="cardcontent"> A toothbrush is a small, hand-held tool used to clean teeth and gums. It has a handle and bristles, usually made of nylon, that help remove plaque, food, and bacteria.</p>
+                                    <a href=""
+                                        download="Alternating Filigree Statement Amber Bracelet.docx">
+                                        <button class="btn btn-light"> view more<i
+                                                class="fa-solid fa-download"></i></button>
+                                    </a>
+                                </div>
+                                <img src="brush/brush img 1.jpeg" class="card-img" alt="">
+                            </div>
+                        </div>
+                        <div class="card-body bg-light text-center">
+                            <div class="mb-2">
+                                <h6 class="mb-3">Curasept Softline</h6>
+                                <a href="" class="text-muted"> ToothBrush</a>
+                            </div>
+                            <h4> 450RS</h4>
+                            <button type="button" class="btn btn-outline-dark" data-bs-toggle="modal" data-bs-target="#TYS">
+                                <i class="fa-solid fa-cart-shopping"></i> Add to cart
+                            </button>
+                        </div>
+                    </div>
+                    <div class="modal" id="card1" tabindex="-1" aria-labelledby="modalLabel" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <h3 id="modalLabel"> Thank YOu !! </h3>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-outline-danger"
+                                        data-bs-dismiss="modal">Close</button>
+                                </div>
+                            </div>
+                        </div>
+    
+                    </div>
+                </div>
+    
+                <div class="col-md-4">
+                    <div class="card">
+                        <div class="card-body b-img">
+                            <div class="cardprod">
+                                <div class="fs-5 new"> new </div>
+                                <div class="overlay">
+                                    <h5 class="cardcontent"> Recommended by leading Dentist</h5>
+                                    <p class="cardcontent"> A toothbrush is a small, hand-held tool used to clean teeth and gums. It has a handle and bristles, usually made of nylon, that help remove plaque, food, and bacteria.</p>
+                                    <a href="Alternating Filigree Statement Amber Bracelet.docx"
+                                        download="Alternating Filigree Statement Amber Bracelet.docx">
+                                        <button class="btn btn-light"> view more <i
+                                                class="fa-solid fa-download"></i></button>
+                                    </a>
+                                </div>
+                                <img src="brush/brush img 2.jpg" class="card-img" alt="">
+                            </div>
+                        </div>
+                        <div class="card-body bg-light text-center">
+                            <div class="mb-2">
+                                <h6 class="mb-3"> Curasept Softline</h6>
+                                <a href="" class="text-muted"> ToothBrush</a>
+                            </div>
+                            <h4> 450RS</h4>
+                            <button type="button" class="btn btn-outline-dark" data-bs-toggle="modal" data-bs-target="#TYS">
+                                <i class="fa-solid fa-cart-shopping"></i> Add to cart</button>
+                        </div>
+                    </div>
+    
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <div class="card-body b-img">
+                            <div class="cardprod">
+                                <div class="fs-5 new"> new </div>
+                                <div class="overlay">
+                                    <h5 class="cardcontent">Recommended by leading Dentist</h5>
+                                    <p class="cardcontent"> A toothbrush is a small, hand-held tool used to clean teeth and gums. It has a handle and bristles, usually made of nylon, that help remove plaque, food, and bacteria.</p>
+                                    <a href="Alternating Filigree Statement Amber Bracelet.docx"
+                                        download="Alternating Filigree Statement Amber Bracelet.docx">
+                                        <button class="btn btn-light">view more <i
+                                                class="fa-solid fa-download"></i></button>
+                                    </a>
+                                </div>
+                                <img src="brush/brush img 3.jpeg" class="card-img" alt="">
+                            </div>
+                        </div>
+                        <div class="card-body bg-light text-center">
+                            <div class="mb-2">
+                                <h6 class="mb-3"> Curasept Softline</h6>
+                                <a href="" class="text-muted"> ToothBrush</a>
+                            </div>
+                            <h4> 450RS</h4>
+                            <button type="button" class="btn btn-outline-dark" data-bs-toggle="modal" data-bs-target="#TYS">
+                                <i class="fa-solid fa-cart-shopping"></i> Add to cart</button>
+                        </div>
+                    </div>
+                  
+                </div>
+                <div class="col-md-4 mt-5">
+                    <div class="card">
+                        <div class="card-body b-img">
+                            <div class="cardprod">
+                                <div class="fs-5 new"> new </div>
+                                <div class="overlay">
+                                    <h5 class="cardcontent">Recommended by leading Dentist</h5>
+                                    <p class="cardcontent"> A toothbrush is a small, hand-held tool used to clean teeth and gums. It has a handle and bristles, usually made of nylon, that help remove plaque, food, and bacteria.</p>
+                                    <a href="Alternating Filigree Statement Amber Bracelet.docx"
+                                        download="Alternating Filigree Statement Amber Bracelet.docx">
+                                        <button class="btn btn-light"> view more <i
+                                                class="fa-solid fa-download"></i></button>
+                                    </a>
+                                </div>
+                                <img src="brush/brush img 4.jpeg" class="card-img"
+                                    alt="">
+                            </div>
+                        </div>
+                        <div class="card-body bg-light text-center">
+                            <div class="mb-2">
+                                <h6 class="mb-3">Curasept Softline</h6>
+                                <a href="" class="text-muted"> ToothBrush</a>
+                            </div>
+                            <h4> 450RS</h4>
+                            <button type="button" class="btn btn-outline-dark" data-bs-toggle="modal" data-bs-target="#TYS">
+                                <i class="fa-solid fa-cart-shopping"></i> Add to cart</button>
+                        </div>
+                    </div>
+    
+                </div>
+                <div class="col-md-4 mt-5">
+                    <div class="card">
+                        <div class="card-body b-img">
+                            <div class="cardprod">
+                                <div class="fs-5 new"> new </div>
+                                <div class="overlay">
+                                    <h5 class="cardcontent">Recommended by leading Dentist</h5>
+                                    <p class="cardcontent"> A toothbrush is a small, hand-held tool used to clean teeth and gums. It has a handle and bristles, usually made of nylon, that help remove plaque, food, and bacteria.</p>
+                                    <a href="Alternating Filigree Statement Amber Bracelet.docx"
+                                        download="Alternating Filigree Statement Amber Bracelet.docx">
+                                        <button class="btn btn-light"> view more <i
+                                                class="fa-solid fa-download"></i></button>
+                                    </a>
+                                </div>
+                                <img src="brush/brush img 5.jpeg" class="card-img"
+                                    alt="">
+                            </div>
+                        </div>
+                        <div class="card-body bg-light text-center">
+                            <div class="mb-2">
+                                <h6 class="mb-3"> Curasept Softline</h6>
+                                <a href="" class="text-muted">ToothBrush</a>
+                            </div>
+                            <h4> 450RS</h4>
+                            <button type="button" class="btn btn-outline-dark" data-bs-toggle="modal" data-bs-target="#TYS">
+                                <i class="fa-solid fa-cart-shopping"></i> Add to cart</button>
+                        </div>
+                    </div>
+    
+                    
+    
+                </div>
+            </div>
+    
+    
+        </div>
+    <center>
+        <h2 class="mt-5 mb-5" id="Special Products For Kids"><u>Special Products For Kids</u></h2>
+    </center>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 ">
+                    <div class="card">
+                        <div class="card-body b-img">
+                            <div class="cardprod">
+                                <div class="fs-5 new"> new </div>
+                                <div class="overlay">
+                                    <h5 class="cardcontent"> Recommended by leading Dentist</h5>
+                                    <p class="cardcontent"> Philips Sonicare is a leading brand of electric toothbrushes known for their sonic technology, which delivers up to 62,000 brush movements per minute.</p>
+                                    <a href="Alternating Filigree Statement Amber Bracelet.docx"
+                                        download="Alternating Filigree Statement Amber Bracelet.docx">
+                                        <button class="btn btn-light"> Download Full Details <i
+                                                class="fa-solid fa-download"></i></button>
+                                    </a>
+                                </div>
+                                <img src="kids product/kids pro img 1.jpg" class="card-img" alt="">
+                            </div>
+                        </div>
+                        <div class="card-body bg-light text-center">
+                            <div class="mb-2">
+                                <h6 class="mb-3"> Philips sonicare</h6>
+                                <a href="" class="text-muted"> Tooth Brush</a>
+                            </div>
+                            <h4> 2500RS</h4>
+                            <button type="button" class="btn btn-outline-dark" data-bs-toggle="modal" data-bs-target="#TYS">
+                                <i class="fa-solid fa-cart-shopping"></i> Add to cart
+                            </button>
+                        </div>
+                    </div>
+                    <div class="modal" id="card1" tabindex="-1" aria-labelledby="modalLabel" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <h3 id="modalLabel"> Thank YOu !! </h3>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-outline-danger"
+                                        data-bs-dismiss="modal">Close</button>
+                                </div>
+                            </div>
+                        </div>
+    
+                    </div>
+                </div>
+    
+                <div class="col-md-4">
+                    <div class="card">
+                        <div class="card-body b-img">
+                            <div class="cardprod">
+                                <div class="fs-5 new"> new </div>
+                                <div class="overlay">
+                                    <h5 class="cardcontent"> Recommended by leading Dentist</h5>
+                                    <p class="cardcontent"> Colgate Kids Toothpaste Gel is specially designed for children, offering gentle cleaning with fun flavors like bubble fruit or strawberry.</p>
+                                    <a href="Alternating Filigree Statement Amber Bracelet.docx"
+                                        download="Alternating Filigree Statement Amber Bracelet.docx">
+                                        <button class="btn btn-light"> Download Full Details <i
+                                                class="fa-solid fa-download"></i></button>
+                                    </a>
+                                </div>
+                                <img src="kids product/kids pro img 2.jpeg" class="card-img" alt="">
+                            </div>
+                        </div>
+                        <div class="card-body bg-light text-center">
+                            <div class="mb-2">
+                                <h6 class="mb-3"> kids toothpaste </h6>
+                                <a href="" class="text-muted"> Toothpaste</a>
+                            </div>
+                            <h4> 600RS</h4>
+                            <button type="button" class="btn btn-outline-dark" data-bs-toggle="modal" data-bs-target="#TYS">
+                                <i class="fa-solid fa-cart-shopping"></i> Add to cart</button>
+                        </div>
+                    </div>
+    
+                </div>
+                <div class="col-md-4 ">
+                    <div class="card">
+                        <div class="card-body b-img">
+                            <div class="cardprod">
+                                <div class="fs-5 new"> new </div>
+                                <div class="overlay">
+                                    <h5 class="cardcontent"> Recommended by leading Dentist</h5>
+                                    <p class="cardcontent"> Colgate Kids Toothpaste Gel is specially designed for children, offering gentle cleaning with fun flavors like bubble fruit or strawberry.</p>
+                                    <a href="Alternating Filigree Statement Amber Bracelet.docx"
+                                        download="Alternating Filigree Statement Amber Bracelet.docx">
+                                        <button class="btn btn-light"> Download Full Details <i
+                                                class="fa-solid fa-download"></i></button>
+                                    </a>
+                                </div>
+                                <img src="kids product/kids pro img 3.png" class="card-img" alt="">
+                            </div>
+                        </div>
+                        <div class="card-body bg-light text-center">
+                            <div class="mb-2">
+                                <h6 class="mb-3"> kids toothpaste</h6>
+                                <a href="" class="text-muted"> ToothPste</a>
+                            </div>
+                            <h4> 600RS</h4>
+                            <button type="button" class="btn btn-outline-dark" data-bs-toggle="modal" data-bs-target="#TYS">
+                                <i class="fa-solid fa-cart-shopping"></i> Add to cart</button>
+                        </div>
+                    </div>
+                  
+                </div>
+                <div class="col-md-4 mt-5">
+                    <div class="card">
+                        <div class="card-body b-img">
+                            <div class="cardprod">
+                                <div class="fs-5 new"> new </div>
+                                <div class="overlay">
+                                    <h5 class="cardcontent"> Recommended by leading Dentist</h5>
+                                    <p class="cardcontent"> sThe BURSTkids Toothbrush is a sonic electric toothbrush designed just for kids. It features gentle yet powerful vibrations to clean tiny teeth effectively and safely.</p>
+                                    <a href="Alternating Filigree Statement Amber Bracelet.docx"
+                                        download="Alternating Filigree Statement Amber Bracelet.docx">
+                                        <button class="btn btn-light"> Download Full Details <i
+                                                class="fa-solid fa-download"></i></button>
+                                    </a>
+                                </div>
+                                <img src="kids product/kids pro img 4.webp" class="card-img"
+                                    alt="">
+                            </div>
+                        </div>
+                        <div class="card-body bg-light text-center">
+                            <div class="mb-2">
+                                <h6 class="mb-3"> BURSTkids</h6>
+                                <a href="" class="text-muted"> Tooth Brush</a>
+                            </div>
+                            <h4> 2000RS</h4>
+                            <button type="button" class="btn btn-outline-dark" data-bs-toggle="modal" data-bs-target="#TYS">
+                                <i class="fa-solid fa-cart-shopping"></i> Add to cart</button>
+                        </div>
+                    </div>
+    
+                </div>
+                <div class="col-md-4 mt-5">
+                    <div class="card">
+                        <div class="card-body b-img">
+                            <div class="cardprod">
+                                <div class="fs-5 new"> new </div>
+                                <div class="overlay">
+                                    <h5 class="cardcontent"> Recommended by leading Dentist</h5>
+                                    <p class="cardcontent"> A toothbrush is a small, hand-held tool used to clean teeth and gums. It has a handle and bristles, usually made of nylon, that help remove plaque, food, and bacteria.</p>
+                                    <a href="Alternating Filigree Statement Amber Bracelet.docx"
+                                        download="Alternating Filigree Statement Amber Bracelet.docx">
+                                        <button class="btn btn-light"> Download Full Details <i
+                                                class="fa-solid fa-download"></i></button>
+                                    </a>
+                                </div>
+                                <img src="kids product/kids pro img 5.png" class="card-img"
+                                    alt="">
+                            </div>
+                        </div>
+                        <div class="card-body bg-light text-center">
+                            <div class="mb-2">
+                                <h6 class="mb-3"> kids ToothBrush</h6>
+                                <a href="" class="text-muted"> ToothBrush</a>
+                            </div>
+                            <h4> 400RS</h4>
+                            <button type="button" class="btn btn-outline-dark" data-bs-toggle="modal" data-bs-target="#TYS">
+                                <i class="fa-solid fa-cart-shopping"></i> Add to cart</button>
+                        </div>
+                    </div>
+    
+                    
+    
+                </div>
+            </div>
+    
+    
+        </div>
+
+
+        <center>
+            <h2 class="mt-5 mb-5" id="Electrical Accessiores"><u>Electrical Accessiores</u></h2>
+        </center>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 ">
+                    <div class="card">
+                        <div class="card-body b-img">
+                            <div class="cardprod">
+                                <div class="fs-5 new"> new </div>
+                                <div class="overlay">
+                                    <h5 class="cardcontent"> Alternating Filigree Statement Amber Bracelet</h5>
+                                    <p class="cardcontent"> short description short description short description short
+                                        description short description</p>
+                                    <a href="Alternating Filigree Statement Amber Bracelet.docx"
+                                        download="Alternating Filigree Statement Amber Bracelet.docx">
+                                        <button class="btn btn-light"> Download Full Details <i
+                                                class="fa-solid fa-download"></i></button>
+                                    </a>
+                                </div>
+                                <img src="electrical accessiores/electrical img 1.avif" class="card-img" alt="">
+                            </div>
+                        </div>
+                        <div class="card-body bg-light text-center">
+                            <div class="mb-2">
+                                <h6 class="mb-3">Recommended by leading Dentist</h6>
+                                <a href="" class="text-muted">Dental Kit</a>
+                            </div>
+                            <h4> 4500 RS</h4>
+                            <button type="button" class="btn btn-outline-dark" data-bs-toggle="modal" data-bs-target="#TYS">
+                                <i class="fa-solid fa-cart-shopping"></i> Add to cart
+                            </button>
+                        </div>
+                    </div>
+                    <div class="modal" id="card1" tabindex="-1" aria-labelledby="modalLabel" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <h3 id="modalLabel"> Thank YOu !! </h3>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-outline-danger"
+                                        data-bs-dismiss="modal">Close</button>
+                                </div>
+                            </div>
+                        </div>
+    
+                    </div>
+                </div>
+    
+                <div class="col-md-4">
+                    <div class="card">
+                        <div class="card-body b-img">
+                            <div class="cardprod">
+                                <div class="fs-5 new"> new </div>
+                                <div class="overlay">
+                                    <h5 class="cardcontent">Dental curing light</h5>
+                                    <p class="cardcontent"> A dental curing light is a handheld device used by dentists to harden or "cure" light-sensitive resin materials during procedures like fillings, sealants, and bonding</p>
+                                    <a href="Alternating Filigree Statement Amber Bracelet.docx"
+                                        download="Alternating Filigree Statement Amber Bracelet.docx">
+                                        <button class="btn btn-light"> Download Full Details <i
+                                                class="fa-solid fa-download"></i></button>
+                                    </a>
+                                </div>
+                                <img src="electrical accessiores/electrical img 2.webp" class="card-img" alt="">
+                            </div>
+                        </div>
+                        <div class="card-body bg-light text-center">
+                            <div class="mb-2">
+                                <h6 class="mb-3">Recommended by leading Dentist</h6>
+                                <a href="" class="text-muted">Dental Curing Light</a>
+                            </div>
+                            <h4> $4500</h4>
+                            <button type="button" class="btn btn-outline-dark" data-bs-toggle="modal" data-bs-target="#TYS">
+                                <i class="fa-solid fa-cart-shopping"></i> Add to cart</button>
+                        </div>
+                    </div>
+    
+                </div>
+                <div class="col-md-4 ">
+                    <div class="card">
+                        <div class="card-body b-img">
+                            <div class="cardprod">
+                                <div class="fs-5 new"> new </div>
+                                <div class="overlay">
+                                    <h5 class="cardcontent"> Ultrasonic scaler</h5>
+                                    <p class="cardcontent">An ultrasonic scaler is a dental tool used to remove plaque, tartar, and stains from teeth. </p>
+                                    <a href="Alternating Filigree Statement Amber Bracelet.docx"
+                                        download="Alternating Filigree Statement Amber Bracelet.docx">
+                                        <button class="btn btn-light"> Download Full Details <i
+                                                class="fa-solid fa-download"></i></button>
+                                    </a>
+                                </div>
+                                <img src="electrical accessiores/electrical img 3.webp" class="card-img" alt="">
+                            </div>
+                        </div>
+                        <div class="card-body bg-light text-center">
+                            <div class="mb-2">
+                                <h6 class="mb-3"> Recommended by leading Dentist</h6>
+                                <a href="" class="text-muted"> Ultrasonic scaler</a>
+                            </div>
+                            <h4> $4500</h4>
+                            <button type="button" class="btn btn-outline-dark" data-bs-toggle="modal" data-bs-target="#TYS">
+                                <i class="fa-solid fa-cart-shopping"></i> Add to cart</button>
+                        </div>
+                    </div>
+                  
+                </div>
+                <div class="col-md-4 mt-5">
+                    <div class="card">
+                        <div class="card-body b-img">
+                            <div class="cardprod">
+                                <div class="fs-5 new"> new </div>
+                                <div class="overlay">
+                                    <h5 class="cardcontent"> Electric tooth polisher</h5>
+                                    <p class="cardcontent"> An electric tooth polisher is a dental device used to smooth and shine teeth after cleaning.</p>
+                                    <a href="Alternating Filigree Statement Amber Bracelet.docx"
+                                        download="Alternating Filigree Statement Amber Bracelet.docx">
+                                        <button class="btn btn-light"> Download Full Details <i
+                                                class="fa-solid fa-download"></i></button>
+                                    </a>
+                                </div>
+                                <img src="electrical accessiores/electrical img 4.webp" class="card-img"
+                                    alt="">
+                            </div>
+                        </div>
+                        <div class="card-body bg-light text-center">
+                            <div class="mb-2">
+                                <h6 class="mb-3"> Recommended by leading Dentist</h6>
+                                <a href="" class="text-muted"> Electric tooth Polisher</a>
+                            </div>
+                            <h4> $4500</h4>
+                            <button type="button" class="btn btn-outline-dark" data-bs-toggle="modal" data-bs-target="#TYS">
+                                <i class="fa-solid fa-cart-shopping"></i> Add to cart</button>
+                        </div>
+                    </div>
+    
+                </div>
+                <div class="col-md-4 mt-5">
+                    <div class="card">
+                        <div class="card-body b-img">
+                            <div class="cardprod">
+                                <div class="fs-5 new"> new </div>
+                                <div class="overlay">
+                                    <h5 class="cardcontent"> Dental Electrosurgery Unit</h5>
+                                    <p class="cardcontent"> A dental electrosurgery unit uses high-frequency electrical currents to cut soft tissue with precision and minimal bleeding.</p>
+                                    <a href="Alternating Filigree Statement Amber Bracelet.docx"
+                                        download="Alternating Filigree Statement Amber Bracelet.docx">
+                                        <button class="btn btn-light"> Download Full Details <i
+                                                class="fa-solid fa-download"></i></button>
+                                    </a>
+                                </div>
+                                <img src="electrical accessiores/electrical img 5.jpeg" class="card-img"
+                                    alt="">
+                            </div>
+                        </div>
+                        <div class="card-body bg-light text-center">
+                            <div class="mb-2">
+                                <h6 class="mb-3"> Recommended by leading Dentist</h6>
+                                <a href="" class="text-muted"> Dental Electrosurgery Unit</a>
+                            </div>
+                            <h4> $4500</h4>
+                            <button type="button" class="btn btn-outline-dark" data-bs-toggle="modal" data-bs-target="#TYS">
+                                <i class="fa-solid fa-cart-shopping"></i> Add to cart</button>
+                        </div>
+                    </div>
+    
+                    
+    
+                </div>
+            </div>
+    
+    
+        </div>
+    
+        <footer class="footer text-light pt-5 mt-5">
+            <div class="container">
+                <div class="row text-center text-md-start align-items-start">
+    
+                    <!-- Logo -->
+                    <div class="col-md-4 mb-4">
+                        <img src="images/img-2-removebg-preview (1).png" alt="32 smile Logo" class="mb-3" height="70" width="70">
+                        <p>We care for your smile with passion and precision. Trusted dental care for the whole family.</p>
+                    </div>
+    
+                    <!-- Contact Info -->
+                    <div class="col-md-4 mb-4">
+                        <h5 class="text-uppercase mb-3">Contact Us</h5>
+                        <p><i class="fas fa-phone-alt me-2"></i> (123) 456-7890</p>
+                        <p><i class="fas fa-envelope me-2"></i> 32 smile@yourdentalclinic.com</p>
+                        <p><i class="fas fa-map-marker-alt me-2"></i> 11, Sana Avenue, Aslam Market, Block D North Nazimabad
+                            Town, Karachi</p>
+                    </div>
+    
+                    <!-- Social Links -->
+                    <div class="col-md-2 mb-4">
+                        <h5 class="text-uppercase mb-3">Follow Us</h5>
+                        <a href="#" class="text-light me-3"><i class="fab fa-facebook fa-lg"></i></a>
+                        <a href="#" class="text-light me-3"><i class="fab fa-instagram fa-lg"></i></a>
+                        <a href="#" class="text-light me-3"><i class="fab fa-twitter fa-lg"></i></a>
+                        <a href="#" class="text-light"><i class="fab fa-linkedin fa-lg"></i></a>
+                    </div>
+                    <div class="col-md-2 mb-4">
+            
+                        <a href="sitemap.html" class="text-light me-3"><i class="fa-solid fa-sitemap"> sitemap</i></a>
+                    </div>
+                </div>
+    
+                <!-- Divider -->
+                <hr class="border-light">
+    
+                <!-- Copyright -->
+                <div class="text-center pb-3">
+                    <p class="mb-0">&copy; 2025 <strong>32 smile</strong>. All rights reserved.</p>
+                </div>
+            </div>
+        </footer>
+    
+        
+</body>
+</html>
